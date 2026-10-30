@@ -34,7 +34,7 @@ Librerías: pandas, numpy, seaborn, matplotlib.
 El análisis es determinista: los mismos archivos de entrada, ejecutados en el orden indicado, producen los mismos resultados.
 
 ## Hallazgos principales
-- **Problemas de datos:** `age = -999` (55 filas, 1.4%), `city` desconocida (565 filas, 14.1%), 40 fechas de registro en 2026 y nulos estructurales en `duration`/`length`; además, 30 registros con `duration = 120` y 30 con `length = 1490` (sentinels repetidos, marcados como nulos).
+- **Problemas de datos:** edad = -999 (55 filas, 1.4%), ciudad desconocida (565 filas, 14.1%), 40 fechas de registro en 2026 y nulos estructurales en duration y length; además, 30 registros con duration = 120 y 30 con length = 1490 (sentinels repetidos, marcados como nulos).
 - **Uso homogéneo:** la edad, el plan y el país no explican diferencias de consumo (Premium se comporta casi igual que Básico).
 - **Segmentos por uso:** Uso medio 73.6%, Bajo uso 19.5% y Alto uso 7.0%.
 - **Valor:** Premium es ~35% de la base pero ~53% del ingreso mensual recurrente. Alto uso tiene mayor tasa de baja (14.0% vs 11.5%).
