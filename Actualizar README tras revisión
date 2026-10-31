@@ -1,3 +1,13 @@
+# Análisis ConnectaTel
+
+## Objetivo
+Evaluar el comportamiento de los clientes de ConnectaTel (Latinoamérica, datos hasta 2024) para construir un perfil estadístico, detectar comportamientos atípicos y segmentar a los clientes, con el fin de sugerir estrategias de retención y mejoras en los planes.
+
+## Datasets
+- `plans.csv`: planes actuales (precio, minutos, mensajes y GB incluidos, costo por extra).
+- `users_latam.csv`: clientes (edad, ciudad, fecha de registro, plan, churn).
+- `usage.csv`: uso real (llamadas y mensajes) registrado en 2024 (enero a junio). No incluye consumo de datos (GB).
+
 ## Etapas del análisis
 1. Carga y exploración de los datos.
 2. Identificación de problemas de calidad: nulos, sentinels (`age = -999`, `city = "?"`, `duration = 120`, `length = 1490`) y fechas imposibles.
@@ -31,3 +41,6 @@ El análisis es determinista: los mismos archivos de entrada, ejecutados en el o
 - **País:** Colombia 46.2% y México 39.7% de los clientes; sin diferencias de uso entre ambos.
 - **Outliers:** solo hacia arriba y se mantienen por ser plausibles (96 usuarios en minutos, 46 en mensajes y 30 en llamadas; no hay outliers hacia abajo). Si las llamadas de 120 min se tratan como nulas, los outliers en minutos bajan a 84 (ver 5.3).
 - **Limitaciones:** no hay consumo de datos (GB) y las diferencias de baja entre segmentos son pequeñas, por lo que se presentan como indicio.
+
+## Repositorio
+https://github.com/adrianacruzrivera-max/proyecto6-connectatel
